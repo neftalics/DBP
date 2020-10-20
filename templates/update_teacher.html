@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    
+  <div class="row">
+    <div class="col-md-4 offset-md-4">
+      <div class="card card-body">
+        <form action="/update_tea/create/{{tea.0}}" method="POST">
+          <div class="form-group">
+            <input type="password" name="password" value="{{tea.2}}" class="form-control" style="width : 250px">
+          </div>
+          <div class="form-group">
+            <input type="text" name="carrera" value="{{tea.4}}" class="form-control" style="width : 250px">
+          </div>
+          <div class="form-group">
+            
+            <select  name="curso_dictado" style="width : 250px" value="{{tea.6}}">
+                <option disabled selected>Selecciona un curso</option>
+                <option value=1>Matemática</option>
+                <option value=2>Física</option>
+                <option value=3>DBP</option>
+                <option value=4>Programación 1</option>
+                <option value=5>Programación 2</option>
+                <option value=6>Estadística</option>
+                <option value=7>Ética y Tecnología</option>
+                <option value=8>Estructuras Discretas 1</option>
+                <option value=9>Estructuras Discretas 2</option>
+                <option value=10>Proyecto Interdisciplinario</option>
+              </select>
+          </div>
+        
+          <div class="form-group">
+            <button class="btn btn-outline-primary" type="submit">Update</button><br>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</html>

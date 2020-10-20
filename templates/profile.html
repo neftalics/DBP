@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Profile</title>
+    <link rel="stylesheet" href="/static/css/bootstrap.css">
+    <script src="/static/js/libs/bootstrap.js" ></script>
+   
+  </head>
+  <body>
+    
+    <div>
+      {% if identi %}
+        <h2>Profesor<h2>
+        
+        
+        <div>
+          <ul >
+            <li>{{person.name}}</li>
+            <li>{{person.edad}}</li>
+            <li>{{person.carrera}}</li>
+            <li>{{person.sexo}}</li>
+            <li>{{person.curso_dictado}}</li>
+          </ul>
+        </div>
+
+        <table>
+          <tr>
+            
+            <td><button class="btn btn-outline-primary" onclick="location.href='/update_tea/create/{{person.id}}' ">Editar</button></td>
+            <td><button class="btn btn-outline-primary" onclick="location.href='/delete/teacher/{{person.id}}'">Eliminar</button></td>
+          </tr>
+        <table>
+
+
+
+
+      {% else %}
+        <h2>Alumno</h2>
+        <div>
+          <ul>
+            <li>{{person.name}}</li>
+            <li>{{person.edad}}</li>
+            <li>{{person.carrera}}</li>
+            <li>{{person.sexo}}</li>
+            <li>{{person.curso1}}</li>
+            <li>{{person.curso2}}</li>
+            <li>{{person.curso3}}</li>
+            <li>{{person.curso4}}</li>
+          </ul>
+        </div>
+        
+        <br><br>
+        <table>
+          <tr>
+            <td><button class="btn btn-outline-primary" onclick="location.href='/update_stu/create/{{person.id}}'">Editar</button></td>
+            <td><button class="btn btn-outline-primary" onclick="location.href='/delete/student/{{person.id}}'">Eliminar</button></td>
+          </tr>
+        <table>
+
+
+
+
+
+      {% endif  %}
+
+
+
+
+
+
+  
+
+
+
+
+
+
+    <!-- 
+    <table>
+      {% for i in data1%}
+      <tr>
+        <td>{{i.name}}</td><br>
+        <td>{{i.edad}}</td><br>
+        <td>{{i.carrera}}</td><br>
+        <td>{{i.sexo}}</td><br>
+        <td>{{i.curso_dictado}}</td><br>
+      </tr>
+      {% endfor %}
+      
+    </table>
+    <br><br>
+    <table>
+      {% for i in data2%}
+      <tr>
+        <td>{{i.name}}</td><br>
+        <td>{{i.edad}}</td><br>
+        <td>{{i.carrera}}</td><br>
+        <td>{{i.sexo}}</td><br>
+        <td>{{i.curso1}}</td><br>
+        <td>{{i.curso2}}</td><br>
+        <td>{{i.curso3}}</td><br>
+        <td>{{i.curso4}}</td><br>
+      </tr>
+      {% endfor %}
+      
+    </table>
+    -->
+
+  </body>
+</html>

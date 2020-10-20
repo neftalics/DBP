@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style media="screen">
+      .center {
+        width: 50%; 
+        margin-left: auto;
+        margin-right: auto;
+      }
+      html, body {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Inicia sesión</title>
+    <link rel="stylesheet" href="/static/css/bootstrap.css">
+    <script src="/static/js/libs/bootstrap.js" ></script>
+    
+  </head>
+  <body>
+    <h1>Inicia sesión</h1>  
+    <br><br>
+    <form action="/login/autenticate" method="POST" class="center">
+      <table class="table table-bordered center">
+        <tbody style="width: 100%">
+          <tr  style="width: 100%">
+            <td style="width:10%">Name</td>
+            <td><input type="text" name="name" style="width:100%"/></td>
+          </tr>
+          <tr>
+            <td>Password</td>
+            <td><input type="password" name="password" style="width:100%"/></td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <input type="submit" name="login" class="btn btn-primary" value="LOGIN"/>
+            </td>
+          </tr>
+        </tbody>
+        
+      </table>
+    </form>
+    <div>
+      
+    </div>
+  </body>
+</html>
